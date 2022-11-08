@@ -32,19 +32,7 @@ truncation_symbol = "…/"
 format = "[$path]($style)[$read_only]($read_only_style) "
 repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
-[kubernetes]
-format = 'on [☸ ($user on )($cluster in )$context \($namespace\)](blue bold) '
-disabled = false
-
-[kubernetes.context_aliases]
-"dev.local.cluster.k8s" = "dev"
-".*/openshift-cluster/.*" = "openshift"
-"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
-
-[kubernetes.user_aliases]
-"dev.local.cluster.k8s" = "dev"
-"root/.*" = "root"
-
+[
 
 
 
