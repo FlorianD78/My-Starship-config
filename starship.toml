@@ -1,0 +1,55 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+format = "on [$symbol$branch(:$remote_branch)]($style) "
+
+[git_commit]
+tag_disabled = false
+commit_hash_length = 5
+
+[python]
+symbol = "🐍"
+pyenv_version_name = true
+
+[terraform]
+format = "[👷 $version$workspace]($style) "
+
+[nodejs]
+format = "via [🔢 $version](bold green) "
+
+[sudo]
+style = "bold orange"
+symbol = "🦁 "
+disabled = false
+format = "[as $symbol]($style)"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+format = "[$path]($style)[$read_only]($read_only_style) "
+repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+
+[kubernetes]
+format = 'on [☸ ($user on )($cluster in )$context \($namespace\)](blue bold) '
+disabled = false
+
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+
+[kubernetes.user_aliases]
+"dev.local.cluster.k8s" = "dev"
+"root/.*" = "root"
+
+
+
+
+
+
+
+
+
