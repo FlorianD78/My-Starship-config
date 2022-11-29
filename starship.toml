@@ -12,7 +12,7 @@ commit_hash_length = 5
 
 [python]
 symbol = "🐍"
-pyenv_version_name = true
+format = "[ $symbol ($version) ]($style)"
 
 [terraform]
 format = "[👷 $version$workspace]($style) "
@@ -32,10 +32,9 @@ truncation_symbol = "…/"
 format = "[$path]($style)[$read_only]($read_only_style) "
 repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
-
-
-
-
-
-
-
+[kubernetes]
+symbol = "⛵ "
+style = "blue"
+disabled = false
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
